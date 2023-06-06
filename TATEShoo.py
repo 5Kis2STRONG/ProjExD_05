@@ -241,12 +241,12 @@ def main():
         screen.blit(bg_img2, [0, 600-y])
         screen.blit(bg_img, [0, 1200-y])
 
-        if tmr%100 == 0:  # 200フレームに1回，敵機を出現させる
+        if tmr%(200-tmrs) == 0:  # 200フレームに1回，敵機を出現させる
 
             emys.add(Enemy())
-        if tmrs<=199:
+        if tmrs<=130:
             if tmr%50==0:
-                tmrs+=1
+                tmrs+=10
         if tmr%25==0:
             score.score_up(1)
 
