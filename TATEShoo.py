@@ -123,13 +123,13 @@ class Enemy(pg.sprite.Sprite):
             self.rect.move_ip(2,1)
             if self.rect.left > 100:
                 self.rect.move_ip(0, -1)
-            if self.rect.left > 480:
+            if self.rect.left > 400:
                 self.rect.move_ip(0, -1)
         else :
             self.rect.move_ip(-2, 1)
-            if self.rect.left > 100:
+            if self.rect.right > 400:
                 self.rect.move_ip(0, -1)
-            if self.rect.left > 480:
+            if self.rect.right > 100:
                 self.rect.move_ip(0, -1)
         if self.rect.right < 0:
             self.kill()
