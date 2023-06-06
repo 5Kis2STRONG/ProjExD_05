@@ -78,7 +78,7 @@ class Beam(pg.sprite.Sprite):
     def __init__(self, player: Player):
         """
         ビーム画像Surfaceを生成する
-        引数 bird：ビームを放つ
+        引数 Player：ビームを放つ
         """ 
         
         super().__init__()
@@ -211,7 +211,7 @@ class Explosion(pg.sprite.Sprite):
 
 
 def main():
-    pg.display.set_caption("はじめてのPygame")
+    pg.display.set_caption("TATEShoo!")
     screen = pg.display.set_mode((WIDTH, HEIGHT))
     clock  = pg.time.Clock()
     bg_img = pg.image.load("ex05/fig/haikei.jpg")
@@ -234,8 +234,6 @@ def main():
                 beams.add(Beam(player))
 
         screen.blit(bg_img, [0,0])
-
-        #screen.blit(bg_img, [0,0])
         y = tmr % 1200
         screen.blit(bg_img, [0, -y])
         screen.blit(bg_img2, [0, 600-y])
